@@ -27,3 +27,5 @@ jobs:
         with:
           name: dependabot_pip_websockets
           path: ${{ runner.temp }}/dependabot_pip_websockets.tar
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
