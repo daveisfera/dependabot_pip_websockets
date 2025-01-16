@@ -21,11 +21,11 @@ jobs:
         with:
           tags: dependabot_pip_websockets:latest
           outputs: type=docker,dest=${{ runner.temp }}/dependabot_pip_websockets.tar
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4.6.0
         with:
           name: dependabot_pip_websockets
           path: ${{ runner.temp }}/dependabot_pip_websockets.tar
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
