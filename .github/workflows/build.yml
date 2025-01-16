@@ -20,7 +20,7 @@ jobs:
         uses: docker/build-push-action@v6.12.0
         with:
           tags: dependabot_pip_websockets:latest
-          outputs: type=docker,dest=${{ runner.temp }}/myimdependabot_pip_websockets.tar
+          outputs: type=docker,dest=${{ runner.temp }}/dependabot_pip_websockets.tar
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4.6.0
