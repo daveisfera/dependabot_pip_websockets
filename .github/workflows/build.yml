@@ -4,6 +4,8 @@ run-name: Build
 
 on:
   push:
+    branches:
+      - "**"
 
 concurrency:
   group: ${{ github.ref }}
